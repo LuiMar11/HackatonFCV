@@ -21,19 +21,32 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-floating" action="{{ route('medicamentos.store') }}"method="POST">
+                                    <form class="form-floating" action="{{ route('citas.store') }}"method="POST">
                                         @csrf
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="hora" id="hora">
-                                            <label for="floatingPassword">Nombre cita</label>
+                                            <input type="text" class="form-control" name="nombre" id="nombre"
+                                                required>
+                                            <label for="nombre">Nombre cita o terapia</label>
                                         </div>
                                         <div class="form-floating">
-                                            <input type="date" class="form-control" name="hora" id="hora">
-                                            <label for="floatingPassword">Fecha de la cita o terapia</label>
+                                            <input type="date" class="form-control" name="fecha" id="fecha"
+                                                required>
+                                            <label for="fecha">Fecha de la cita o terapia</label>
                                         </div>
                                         <div class="form-floating">
-                                            <input type="time" class="form-control" name="hora" id="hora">
-                                            <label for="floatingPassword">Hora de la cita o terapia</label>
+                                            <input type="time" class="form-control" name="hora" id="hora"
+                                                required>
+                                            <label for="hora">Hora de la cita o terapia</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="medico" id="medico"
+                                                required>
+                                            <label for="medico">Nombre del médico</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="direccion" id="direccion"
+                                                required>
+                                            <label for="direccion">Dirección lugar de la cita</label>
                                         </div>
                                         <div class="form-group float-end">
                                             <button type="button" class="btn btn-danger"
@@ -54,22 +67,21 @@
                                     <div class="card p-3 mb-2">
                                         <div class="d-flex justify-content-between">
                                             <div class="d-flex flex-row align-items-center">
-                                                <div class="icon"><i class="far fa-capsules"></i></div>
-                                                <h2 class="heading"></h2>
+                                                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                                                <h2 class="heading">{{ $cita->nombre }}</h2>
                                             </div>
                                         </div>
                                         <div class="mt-5">
-                                            <label class="lblHora" for=""></label>
-                                            <label class="lblHora" for=""></label>
+                                            <label class="lblHora" for="">{{ $cita->hora }}</label>
+                                            <label class="lblHora" for="">{{ $cita->medico }}</label>
+                                            <label class="lblHora" for="">{{ $cita->direccion }}</label>
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                <a class="btn btn-success"
-                                                    href="{{ route('medicamentos.edit', $medicamento->id) }}"><i
+                                                <a class="btn btn-success" href="{{ route('citas.edit', $cita->id) }}"><i
                                                         class="fas fa-pencil"></i></a>
 
-                                                <form action="{{ route('medicamentos.destroy', $medicamento->id) }}"
-                                                    method="POST">
+                                                <form action="{{ route('citas.destroy', $cita->id) }}" method="POST">
                                                     @csrf
                                                     {{ method_field('DELETE') }}
                                                     <button class="btn btn-danger" type="submit"

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cita;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CitaController extends Controller
 {
@@ -29,7 +30,10 @@ class CitaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cita = request()->except('_token');
+        Cita::insert($cita);
+        Alert::success('Cita creada');
+        return redirect(route('citas.index'));
     }
 
     /**
@@ -43,24 +47,31 @@ class CitaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Cita $cita)
+    public function edit($id)
     {
-        //
+        $cita = Cita::findorFail($id);
+        return view('citas.edit', compact('cita'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Cita $cita)
+    public function update(Request $request, $id)
     {
-        //
+        $datos = request()->except('_token', '_method');
+        Cita::where('id', '=', $id)->update($datos);
+        $cita = Cita::findOrFail($id);
+        Alert::success('Cita editado');
+        return redirect(route('citas.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Cita $cita)
+    public function destroy($id)
     {
-        //
+        Cita::destroy($id);
+        Alert::success('Cita eliminada');
+        return redirect(route('citas.index'));
     }
 }
