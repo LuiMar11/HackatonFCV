@@ -40,15 +40,9 @@ body {
     margin: auto;
 }
 
-.center {
-    font-size: 50px;
-    margin: auto;
-    width: 70%;
-    padding: 10px;
-}
-
 .texto {
-    font-size: 30px;
+    padding-top: 50%;
+    font-size: 20px;
 }
 
 .nav-link {
