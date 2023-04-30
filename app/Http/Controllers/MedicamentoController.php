@@ -36,8 +36,13 @@ class MedicamentoController extends Controller
         $time = Carbon::parse($request->hora);
         $time->format('g:i a');
         $medicamento->hora = $time;
-        foreach ($request->dias as $dia) {
-            $medicamento->dias .= $dia . ' ';
+        if ($request->dias == null) {
+            Alert::warning('Debe seleccionar los dias de toma del medicamento');
+            return redirect(route('medicamentos.index'));
+        } else {
+            foreach ($request->dias as $dia) {
+                $medicamento->dias .= $dia . ' ';
+            }
         }
 
         $medicamento->save();

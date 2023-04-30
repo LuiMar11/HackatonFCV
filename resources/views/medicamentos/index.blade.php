@@ -62,7 +62,8 @@
                                             <label class="btn btn-outline-primary" for="domingo">Domingo</label>
                                         </div>
                                         <div class="form-floating">
-                                            <input type="time" class="form-control" name="hora" id="hora">
+                                            <input type="time" class="form-control" name="hora" id="hora"
+                                                required>
                                             <label for="floatingPassword">Hora de tomar el medicamento</label>
                                         </div>
                                         <div class="form-group float-end">
