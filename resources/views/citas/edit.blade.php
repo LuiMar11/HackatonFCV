@@ -13,23 +13,30 @@
                         <div class="form-floating">
                             <input type="text" class="form-control" name="nombre" id="nombre" required
                                 value="{{ $cita->nombre }}">
-                            <label for="nombre">Nombre cita o terapia</label>
-                        </div>
-                    </div>
-                </div><br>
-                <div class="row justify-content-center">
-                    <div class="col-md-auto">
-                        <div class="col-8">
-                            <div class="form-floating">
-                                <input type="date" class="form-control" name="nombre" id="nombre" required
-                                    value="{{ $cita->fecha }}">
-                                <label for="nombre">Fecha de la cita o terapia</label>
-                            </div>
+                            <label for="nombre">Cita médica o terapia</label>
                         </div>
                     </div>
                 </div><br>
                 <div class="row justify-content-center">
                     <div class="col-8">
+                        <div class="form-floating">
+                            <input type="date" class="form-control" name="fecha" id="fecha" required
+                                value="{{ $cita->fecha }}">
+                            <label for="fecha">Fecha de la cita o terapia</label>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" name="medico" id="medico"
+                                value="{{ $cita->medico }}">
+                            <label for="floatingPassword">Nombre del médico</label>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
                         <div class="form-floating">
                             <input type="time" class="form-control" name="hora" id="hora"
                                 value="{{ $cita->hora }}">
@@ -40,7 +47,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-auto">
                         <div class="form-group">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <a class="btn btn-danger" href="{{ route('citas.index') }}">Cancelar</a>
                             <button type="submit" class="btn btn-success">Editar</button>
                         </div>
                     </div>

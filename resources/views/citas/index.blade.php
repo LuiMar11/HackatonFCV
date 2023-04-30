@@ -72,9 +72,13 @@
                                             </div>
                                         </div>
                                         <div class="mt-5">
-                                            <label class="lblHora" for="">{{ $cita->hora }}</label>
-                                            <label class="lblHora" for="">{{ $cita->medico }}</label>
-                                            <label class="lblHora" for="">{{ $cita->direccion }}</label>
+                                            <label class="lblHora" for=""><b>Hora cita</b>
+                                                {{ $cita->hora }}</label>
+                                            <label class="lblHora" for=""><b>Fecha
+                                                    cita </b>{{ $cita->fecha }}</label>
+                                            <label class="lblHora" for=""><b>Médico </b> {{ $cita->medico }}</label>
+                                            <label class="lblHora" for=""><b>Dirección cita </b>
+                                                {{ $cita->direccion }}</label>
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">

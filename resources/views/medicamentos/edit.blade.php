@@ -23,7 +23,8 @@
                 </div><br>
                 <div class="row justify-content-center">
                     <div class="col-md-auto">
-                        <div class="btn-group btn-group-sm" name="grupo_dia" role="group"
+
+                        <div class="btn-group btn-group-sm flex-wrap" data-toggle="buttons" name="grupo_dia" role="group"
                             aria-label="Basic checkbox toggle button group">
                             <input type="checkbox" class="form-check-input btn-check" value="lunes" id="lunes"
                                 autocomplete="off" name="dias[]">
@@ -66,7 +67,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-auto">
                         <div class="form-group">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <a class="btn btn-danger" href="{{ route('medicamentos.index') }}">Cancelar</a>
                             <button type="submit" class="btn btn-success">Editar</button>
                         </div>
                     </div>

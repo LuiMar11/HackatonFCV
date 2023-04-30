@@ -31,9 +31,9 @@
                                                 <option value="Esomeprazol">Esomeprazol</option>
                                             </select>
                                             <label for="floatingSelect">Nombre del medicamento</label>
-                                        </div>
-                                        <div class="btn-group btn-group-sm" name="grupo_dia" role="group"
-                                            aria-label="Basic checkbox toggle button group">
+                                        </div><br>
+                                        <div class="btn-group btn-group-sm flex-wrap" data-toggle="buttons" name="grupo_dia"
+                                            role="group" aria-label="Basic checkbox toggle button group">
                                             <input type="checkbox" class="form-check-input btn-check" value="lunes"
                                                 id="lunes" autocomplete="off" name="dias[]">
                                             <label class="btn btn-outline-primary" for="lunes">Lunes</label>
@@ -60,12 +60,12 @@
                                             <input type="checkbox" class="form-check-input btn-check" value="domingo"
                                                 id="domingo" autocomplete="off" name="dias[]">
                                             <label class="btn btn-outline-primary" for="domingo">Domingo</label>
-                                        </div>
+                                        </div><br>
                                         <div class="form-floating">
                                             <input type="time" class="form-control" name="hora" id="hora"
                                                 required>
                                             <label for="floatingPassword">Hora de tomar el medicamento</label>
-                                        </div>
+                                        </div><br>
                                         <div class="form-group float-end">
                                             <button type="button" class="btn btn-danger"
                                                 data-bs-dismiss="modal">Cancelar</button>
@@ -90,8 +90,10 @@
                                             </div>
                                         </div>
                                         <div class="mt-5">
-                                            <label class="lblHora" for="">{{ $medicamento->dias }}</label>
-                                            <label class="lblHora" for="">{{ $medicamento->hora }}</label>
+                                            <label class="lblHora" for=""><b>Dias que toma el medicamento</b>
+                                                {{ $medicamento->dias }}</label>
+                                            <label class="lblHora" for=""><b>Hora toma
+                                                    medicamento</b> {{ $medicamento->hora }}</label>
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group" role="group"
