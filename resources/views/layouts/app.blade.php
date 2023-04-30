@@ -25,8 +25,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    BioIntec
+                <a class="navbar-brand" href="{{ route('welcome') }}">
+                    <img class="logo" src="{{ asset('img/logo.png') }}" alt="">
+                    Asissteme
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

@@ -46,3 +46,12 @@ body {
     width: 70%;
     padding: 10px;
 }
+
+.nav-link {
+    color: #FFF;
+}
+
+.logo {
+    width: 30px;
+    height: 50px;
+}
