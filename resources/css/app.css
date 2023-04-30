@@ -41,8 +41,10 @@ body {
 }
 
 .texto {
-    padding-top: 50%;
-    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    font-size: 25px;
 }
 
 .nav-link {
