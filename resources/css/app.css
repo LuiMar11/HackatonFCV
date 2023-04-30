@@ -53,6 +53,10 @@ body {
     font-size: 30px;
 }
 
+.navbar {
+    background-color: #865EEC;
+}
+
 .nav-link {
     color: #FFF;
 }
