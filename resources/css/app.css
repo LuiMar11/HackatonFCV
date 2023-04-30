@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
 body {
     background-image: url('https://i.pinimg.com/originals/1a/ee/5c/1aee5c344846f449350feae457ea350e.jpg');
     background-repeat: no-repeat;
@@ -44,7 +50,7 @@ body {
     margin-top: 50px;
     margin-left: 10vh;
     margin-right: 10vh;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .nav-link {

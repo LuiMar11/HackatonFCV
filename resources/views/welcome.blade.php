@@ -4,7 +4,8 @@
     <div class="container-fluid">
         <div class="row center">
             <div class="col-md-auto">
-                <h5 class="texto"> <b>Asissteme</b> <br> sera tu asistente virtual para tus recordatorios de citas médicas y
+                <h1 class="text-center"><b>Asissteme</b></h1>
+                <h5 class="texto">Asissteme sera tu asistente virtual para tus recordatorios de citas médicas y
                     toma
                     de
                     medicamentos</h5>
