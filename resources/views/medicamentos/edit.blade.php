@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="card">
             <div class="text-center">
                 <h3>Editar el horario del medicamento {{ $medicamento->nombre }}</h3>
@@ -72,8 +72,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </form>
         </div>
     </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     @include('sweetalert::alert')
-    <div class="container-fluid">
+    <div class="container">
         <br>
         <div class="col-md-12">
             <div class="card bg-light">
